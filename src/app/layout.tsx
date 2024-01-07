@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Urbanist, Fredoka } from 'next/font/google'
 import './globals.scss'
 import { CSSProperties } from 'react'
+import Header from '@/components/layout/header/Header'
+import Footer from '@/components/layout/footer/Footer'
 
 const fredoka = Fredoka({ subsets: ['latin'] })
 const urbanist = Urbanist({ subsets: ['latin'] })
@@ -26,7 +28,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={urbanist.className} style={{'--fontMain':urbanist.className,'--fontAlt':fredoka.className} as CSSProperties} >{children}</body>
+      <body className={urbanist.className} style={{'--fontMain':urbanist.className,'--fontAlt':fredoka.className} as CSSProperties} >
+				<Header/>
+				{children}
+				<Footer/>
+			</body>
     </html>
   )
 }
