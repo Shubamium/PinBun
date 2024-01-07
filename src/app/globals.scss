@@ -17,6 +17,10 @@ body {
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	min-width: 100%;
+
+	&::before{
+		content: '';
+	}
 }
 
 :root{
@@ -26,4 +30,18 @@ body {
 }
 main{
 	min-height: 210vh;
+	background: url('/images/textures/dot.png');
+	background-size: 1.2vh;
+	animation: moving 150s ease-in-out infinite;
+}
+
+
+@keyframes moving{
+	0%{
+		background-position: 0% 0%;
+		
+	}
+	100%{
+		background-position: 200% 100%;
+	}
 }
