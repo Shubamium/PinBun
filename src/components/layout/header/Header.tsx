@@ -1,11 +1,13 @@
 import React from 'react'
 import './header.scss'
+import Navigation from './navigation/Navigation'
 type Props = {}
 
 export default function Header({}: Props) {
 	return (
-		<header className='main_header'>
-		<h1>Pinbun</h1>
+		<header id='container_header'>
+			<h1 style={{display:'none'}}>Pinbun</h1>
+			<Navigation/>
 		</header>
 	)
 }
