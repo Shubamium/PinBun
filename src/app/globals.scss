@@ -26,15 +26,31 @@ body {
 :root{
 	// Color Variables
 	--cPrimary: #C26B72;
-	
+	--cPrimaryDark: #B85064;
 }
+
 main{
-	min-height: 210vh;
+	min-height: 90vh;
 	background: url('/images/textures/dot.png');
 	background-size: 1.2vh;
+	padding-top: 50px;
 	animation: moving 150s ease-in-out infinite;
 }
 
+
+.btn{
+	scale: 1;
+
+	transition: all 250ms ease;
+	border-radius: 1em;
+	cursor: pointer;
+	&:hover{
+		scale: 1.05;
+	}
+	&:active{
+		scale: .95;
+	}
+}
 
 @keyframes moving{
 	0%{
