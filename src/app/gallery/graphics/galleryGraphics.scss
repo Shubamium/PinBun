@@ -1,3 +1,143 @@
 #gallery_graphics{
 	
+
+	.graphic-list{
+		display: flex;
+		max-width: 1200px;
+		margin: 0 auto;
+		// background: red;
+		gap: 1.85em;
+		justify-content: center;
+		padding: 50px 0;
+		flex-wrap: wrap;
+		.graphic{
+			width: 350px;
+			height: 230px;
+			border: 4px solid white;
+			border-radius: 1em;
+			// box-shadow: 2px 4px var(--cPrimary);
+			background:url('/images/textures/checker.png') ,#C26B72;
+			background-size: 40px;
+			filter: drop-shadow(2px 4px var(--cPrimary));
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			// align-items: end;
+			justify-content: flex-end;
+			z-index: 1;
+
+			&:hover{
+				z-index: 1000;
+				.info{
+					padding: .25em 2em;
+					&::before{
+					// background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.155) 20%, black 100%);
+					height: 250px;
+
+					}
+				}
+				scale: 1.05;
+			}
+			scale: 1;
+			transition: all 400ms ease;
+			.info{
+				display: flex;
+				justify-content: space-between;
+				border-top: 2px solid #ffabb2;
+				position: relative;
+				z-index: 10;
+				align-items: center;
+				padding: .25em 1em;
+				transition: all 100ms ease;
+				h2{
+					font-size: .7rem;
+					font-weight: normal;
+					display: flex;
+					align-items: center;
+					gap: .25em;
+				}
+				&::before{
+					content: '';
+					position: absolute;
+					bottom: 0%;
+					left: 0%;
+					width: 100%;
+					// height: 100px;
+					background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.155) 50%, black 100%);
+					border-radius: 0 0 1em 1em;
+					transition: all 250ms ease;
+					height: 150px;
+					z-index: -2;
+
+					opacity: 1;
+				}
+
+				&::after{
+					content: '';
+					width:90%;
+					border-radius: 1em;
+					height: 2px;
+					background-color: var(--cPrimary);
+					position: absolute;
+					top: -10%;
+				}
+				.credit{
+					font-size: .7rem;
+					color: var(--cPrimary);
+					text-decoration: none;
+				}
+			}
+
+			.graphic-part{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				img{
+					object-fit: cover;
+					border-radius: 1em;
+					width: 100%;
+					height: 100%;
+				}
+				&:hover{
+					img{
+						// object-fit: contain;
+
+					}
+				}
+			}
+
+			.decors{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				// background: red;
+				.decor{
+					position: absolute;
+					top: 0%;
+					left: 0%;
+
+					&.bunny{
+						z-index: 100;
+						max-width: 100px;
+						transform: translate(-50%);
+						top: -20%;
+					}
+					&.carrot{
+						z-index: 100;
+						max-width: 70px;
+						transform: translate(-50%);
+						top: 60%;
+						left: 95%;
+						rotate: 70deg;
+					}
+
+					&.pyon{
+						max-width: 90px;
+						left: 70%;
+						top: -20%;
+					}
+				}
+			}
+		}
+	}
 }

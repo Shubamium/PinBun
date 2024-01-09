@@ -13,21 +13,13 @@
 		overflow-x: auto ;
 		white-space: nowrap;
 
-
-		  /* The content mask is a linear gradient from top to bottom */
-			--mask-image-content: linear-gradient(
-        to right,
-        transparent,
-        black var(--mask-height),
-        black calc(100% - var(--mask-height)),
-        transparent
-    );
+		 
 		$fadeSize: 30px;
 		mask-image: linear-gradient(to right,transparent, black calc(0% + $fadeSize), black calc(100% - $fadeSize), transparent );
 		.vessel{
 			flex-shrink: 0;
 			height: 460px;
-			background: linear-gradient(71deg, #C26B72 25.09%, #BA5768 50.77%, #D39789 93.58%);
+			background: linear-gradient(70deg, #C26B72 25.09%, #BA5768 50.77%, #D39789 93.58%);
 			border: 4px solid white;
 			outline: 3px solid var(--cPrimaryDark);
 			outline-offset: 2px;
