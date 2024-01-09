@@ -27,6 +27,7 @@ body {
 	// Color Variables
 	--cPrimary: #C26B72;
 	--cPrimaryDark: #B85064;
+	--cPrimaryGrad:linear-gradient(180deg, #F2A3AC 0%, #CE5676 100%);
 }
 
 main{
@@ -35,6 +36,7 @@ main{
 	background-size: 1.2vh;
 	padding-top: 50px;
 	animation: moving 150s ease-in-out infinite;
+	overflow: hidden;
 }
 
 
@@ -44,6 +46,8 @@ main{
 	transition: all 250ms ease;
 	border-radius: 1em;
 	cursor: pointer;
+	display: block;
+	width: max-content;
 	&:hover{
 		scale: 1.05;
 	}

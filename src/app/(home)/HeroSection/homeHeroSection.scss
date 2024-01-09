@@ -158,6 +158,8 @@
 					scale: 1.5;
 				}
 				.bg-icon{
+					scale: .7;
+				
 					svg{
 						fill: white;
 					}
@@ -173,6 +175,8 @@
 			.bg-icon{
 				position: absolute;
 				transform: translate(-50%);
+				transition: all 400ms ease;
+				transform-origin: center;
 				svg{
 					width: 50px;
 					// width: 100%;

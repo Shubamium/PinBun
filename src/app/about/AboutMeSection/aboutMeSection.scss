@@ -1,0 +1,267 @@
+#about_about-me{
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	// align-items: end;
+
+
+	.art-part{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0%;
+		left: 0%;
+		// background: green;
+
+		&:hover{
+			.decor{
+				scale: 1.2;
+
+				&.er{
+					transform: translateX(200px);
+				}
+				&.er{
+					transform: translateX(20%);
+				}
+			}
+
+			.main_art{
+				animation: teeter 4s ease ;
+			}
+		}
+		&::before{
+			content: '';
+			background: url('/images/textures/wavy.png'),#E4BCDF;
+			animation: scrollish 40s infinite linear;
+			position: absolute;
+			width: 100%;
+			// height: 500px;
+			// height: 100%;
+			scale: .6;
+			top: -10%;	
+			border-radius: 50%;
+			aspect-ratio: 1/1;
+			left: 0%;
+			
+		}
+
+		.decor{
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			transition: all 100ms ease;
+
+		}
+
+		.decor_exes{
+			left: 15%;
+			top: 60%;
+			width: 80px;
+		}
+		.decor_carrot{
+			width: 100px;
+			top: 40%;
+			&.r{
+				left: 70%;
+				rotate: 70deg;
+			}
+
+			&.l{
+				left: 15%;
+			}
+		}
+
+		.decor_heart{
+			// width: 200px;
+			&.red{
+				left: 25%;
+				top: 20%;
+				max-width: 60px;
+			}
+
+			&.black{
+				left: 55%;
+				top: 10%;
+				max-width: 140px;
+			}
+		}
+		.main_art{
+			max-width: 100%;
+			max-height: 100%;
+			position: absolute;
+			width: 100%;
+			object-fit: contain;
+
+		
+			// border-radius: 50%;
+			// margin: 0 auto;
+		}
+	}
+	.gfx{
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		padding: 0 2em;
+		position: relative;
+		.gfx-panel{
+			background: var(--cPrimaryGrad);
+			border-radius: 1em;
+			padding: .55em;
+			border: 3px solid white;
+			max-width: 80%;
+			margin: 0 auto;
+			width: 100%;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+
+			position: relative;
+			.data{
+
+				.corrupt{
+					filter: blur(1px);
+					color: black;
+				}
+			}
+
+			.logo{
+				position: absolute;
+				right: 0%;
+				.img_logo{
+					// max-height: 300%;
+					height: 150px;
+					transform: translateY(-20%);
+					right: 0%;
+				}
+			}
+		}
+	}
+	.bio{
+		padding-top: 50px;
+		padding-inline: 2%;
+		position: relative;
+		z-index: 1;
+		.decor_ear{
+			left: 70%;
+			top: -5%;
+			position: absolute;
+			z-index: -2;
+			max-width: 150px;
+		}
+		.panel{
+			border: 4px solid white;
+			border-radius: 1em;
+			background: url('/images/textures/circle_dot.png'), var(--cPrimaryGrad);
+			padding: 1.5em;
+			background-size: 20px;
+			h1{
+				font-size: 2rem;
+				font-family: var(--fontAlt);
+				line-height: 50%;
+			}
+			.line{
+				height: 2px;
+				border: none;
+				border-top: 4px dotted var(--cPrimary);
+				margin: 1em 0;
+				opacity: .5;
+				
+			}
+			br{
+				margin-bottom: 1em;
+			}
+			.bio-text{
+				font-size: .9rem;
+			}
+
+
+			.tags{
+				background: #F2A3AD;
+				padding: 1em;
+				border-radius: .25em;
+				margin: 1em 0;
+				padding-right: 20%;
+				.tag-list{
+					display: grid;
+					grid-template-columns:90px 1fr;
+					gap: 1em;
+					.header{
+						background: var(--cPrimaryDark);
+						display: flex;
+						flex-direction: column;
+						padding: .5em;
+						border-radius: .5em;
+						// justify-content: c;
+						transition: all 150ms ease;
+
+						&:hover{
+							scale: 1.05;
+						}
+						h2{
+							color: white;
+							font-size: 1rem;
+						}
+						.icon{
+							text-align: center;
+							font-size: 5rem;
+							line-height: 80%;
+						}
+					}
+					.all-tags{
+						display: grid;
+						grid-template-columns: 1fr 1fr;
+						gap: .2em;
+						.tag{
+							&-title,&-name{
+								background: #FFC2CA;
+								color: var(--cPrimary);
+								text-align: center;
+								padding: .25em 1em;
+								border-radius: 2em;
+							}
+
+							&-title{
+								font-size: .8rem;
+							}
+							&-name{
+								margin: .25em 0;
+								font-size: 1rem;
+								font-weight: bold;
+								color: #B35265;
+							}
+						}
+					}
+					position: relative;
+					.decor_tagcheebs{
+						position: absolute;
+						left: 90%;
+						bottom: -50%;
+						width: 220px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@keyframes scrollish {
+	from{
+		background-position: 0% 0%;
+	}
+	to{
+		background-position: 300% 300%;
+	}
+}
+
+@keyframes teeter {
+	from{
+		rotate: 5deg;
+	}
+	50%{
+		rotate: -5deg;
+	}
+	to{
+		rotate: 5deg;
+	}
+}

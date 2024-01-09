@@ -5,8 +5,8 @@ import { CSSProperties } from 'react'
 import Header from '@/components/layout/header/Header'
 import Footer from '@/components/layout/footer/Footer'
 
-const fredoka = Fredoka({ subsets: ['latin'], variable:'--fontMain' })
-const urbanist = Urbanist({ subsets: ['latin'], variable:'--fontAlt' })
+const fredoka = Fredoka({ subsets: ['latin'], variable:'--fontAlt' })
+const urbanist = Urbanist({ subsets: ['latin'], variable:'--fontMain' })
 
 export const metadata: Metadata = {
   title: 'Pinbun',
@@ -28,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={urbanist.className}  >
+      <body className={urbanist.className + ' ' + fredoka.variable }  >
 				<Header/>
 				{children}
 				<Footer/>
