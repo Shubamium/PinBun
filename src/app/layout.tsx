@@ -28,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={urbanist.className + ' ' + fredoka.variable }  >
+      <body className={urbanist.className + ' ' + fredoka.className } style={fredoka.style}  >
 				<Header/>
 				{children}
 				<Footer/>
