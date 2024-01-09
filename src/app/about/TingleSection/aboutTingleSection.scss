@@ -1,0 +1,31 @@
+#about_tingle{
+	
+		background: url('/images/textures/circle_dot.png'),#F4ACBA;
+		background-size: 20px;
+		box-shadow: 4px 4px 13px 5px rgba(171, 85, 85, 0.475);
+		margin: 100px 0;
+		border-block: 2px solid white;
+		.content{
+			max-width: 900px;
+			margin: 0 auto;
+			// display: grid;
+			// grid-template-columns: 1fr 1fr;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			p{
+				max-width: 50ch;
+			}
+
+			.answer{
+				color: black;
+				transform: skew(-40deg) rotate(-2deg);
+			}
+			figure{
+				img{
+					max-height: 150px;
+					scale: 1.5;
+				}
+			}
+		}
+}
