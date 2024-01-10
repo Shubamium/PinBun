@@ -25,7 +25,7 @@ export default function ContactList({}: Props) {
 			<span className='main-icon'> <FaTiktok/></span>
 		</a>
 		{/* Invalid invite link */}
-		<a href="https://discord.com/invite/SJM7ug6we6" target='_blank' className='contact-heart'>
+		<a href="https://discord.gg/pinpals" target='_blank' className='contact-heart'>
 			<span className='bg-icon'> <CiHeart/></span>
 			<span className='main-icon'> <FaDiscord/></span>
 		</a>
