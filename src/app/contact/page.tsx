@@ -12,14 +12,14 @@ export default function page({}: Props) {
 					<img src="/images/decorations/ear_limp.png" alt="" className='ear r' />
 				</div>
 			<div className="contact-panel">
-				<form action="#" className='contact-form'>
+				<form action="https://formspree.io/f/mqkrakdv" method='POST' className='contact-form'>
 					<div className="form-header">
 						<div className="head">
 							<h1>Contact</h1> 
 							<img src='/images/decorations/bunny_l.png'></img>
 						</div>
 						<div className="desc">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+							<p>Have any questions for me? Feel free to reach out using the form below!</p>
 						</div>
 					</div>
 					<div className="group">
