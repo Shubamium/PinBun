@@ -7,6 +7,10 @@ type Props = {}
 export default function page({}: Props) {
 	return (
 		<main id='container_contact'>
+				<div className="decor_ears">
+					<img src="/images/decorations/ear_limp.png" alt="" className='ear l ' />
+					<img src="/images/decorations/ear_limp.png" alt="" className='ear r' />
+				</div>
 			<div className="contact-panel">
 				<form action="#" className='contact-form'>
 					<div className="form-header">

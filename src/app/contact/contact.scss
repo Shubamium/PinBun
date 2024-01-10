@@ -2,9 +2,29 @@
 	
 	// margin: 1em;
 	// padding: 1em 2em;
+	
+	.decor_ears{
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		z-index: -1000;
+		max-width: 1200px;
+		margin:-10px auto;
+		.l{
+			scale: -1 1;
+		}
+		.ear{
+			transition: all 250ms ease;
+		}
+		filter: drop-shadow(4px 4px #cc777779);
+		transition: all 250ms ease;
+		&:hover{
+			scale: 1 .8;
+		}
+	}
 	.contact-panel{
 		max-width: 1200px;
-		margin: 30px auto;
+		margin: 0 auto;
 		background-color: red;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -26,6 +46,8 @@
 			pointer-events: none;
 			content: '';
 		}
+		
+	
 		.contact-form{
 			padding: 2em;
 			.form-header{
