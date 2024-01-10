@@ -1,9 +1,29 @@
 import React from 'react'
 import './shop.scss'
 import { FaPlus, FaShoppingBag, FaShoppingCart } from 'react-icons/fa'
+import { fetchData, urlFor } from '@/db/client'
 type Props = {}
 
-export default function page({}: Props) {
+type ProductData = {
+	_id: string
+	name: string
+	description: string
+	image: string
+	price: string
+	store_url: string
+}
+export default async function page({}: Props) {
+
+	const data:ProductData[] =  await fetchData<any>(`
+			*[_type == 'product']{
+			_id,
+			name,
+			description,
+			image,
+			price,
+			store_url
+		}
+`)
 	return (
 		<main id='container_shop'>
 			<header>
@@ -23,9 +43,10 @@ export default function page({}: Props) {
 			</header>
 
 			<div className="product-list">
-				<div className="product">
+				{data && data.length > 0 && data.map((product)=>{
+					return 	<div className="product" key={product._id}>
 					<div className="img-part">
-						<img src="/images/placeholders/product.png" alt="" className='img' />
+						<img src={urlFor(product.image).url()} alt="" className='img' />
 						
 						<div className="decor_bunnies">
 							<img src="/images/decorations/bunny_m.png" alt="" />
@@ -35,122 +56,19 @@ export default function page({}: Props) {
 						<img src="/images/decorations/x_group_2.png" alt="" className='decor_exes' />
 					</div>
 					<div className="info-part">
-					 <h2 className='prod-name'>Pibba Keychain Pack</h2>
+					 <h2 className='prod-name'>{product.name}</h2>
 					 <hr  className='line'/>
-					 <p className='prod-desc'>{`
-						Ever wanted a cute lil eldritch mom to carry around with you? Now's your chance!
-					 `}</p>
+					 <p className='prod-desc'>{product.description}</p>
 					</div>
 					
 					<img src="/images/decorations/slash.png" alt="" className='decor_slash' />
 					<div className="pricing">
-						<div className="price">$15.00 - $45.00</div>
-						<a href="https://pinbunshop.bigcartel.com/product/pibba-keychain-pack" className='btn add'> <FaPlus/> Add to cart </a>
+						<div className="price">{product.price}</div>
+						<a href={product.store_url} className='btn add'> <FaPlus/> Add to cart </a>
 					</div>
 				</div>
-				<div className="product">
-					<div className="img-part">
-						<img src="/images/placeholders/product.png" alt="" className='img' />
-						
-						<div className="decor_bunnies">
-							<img src="/images/decorations/bunny_m.png" alt="" />
-							<img src="/images/decorations/bunny_m.png" alt="" />
-							<img src="/images/decorations/bunny_m.png" alt="" />
-						</div>
-						<img src="/images/decorations/x_group_2.png" alt="" className='decor_exes' />
-					</div>
-					<div className="info-part">
-					 <h2 className='prod-name'>Pibba Keychain Pack</h2>
-					 <hr  className='line'/>
-					 <p className='prod-desc'>{`
-						Ever wanted a cute lil eldritch mom to carry around with you? Now's your chance!
-					 `}</p>
-					</div>
-					
-					<img src="/images/decorations/slash.png" alt="" className='decor_slash' />
-					<div className="pricing">
-						<div className="price">$15.00 - $45.00</div>
-						<a href="https://pinbunshop.bigcartel.com/product/pibba-keychain-pack" className='btn add'> <FaPlus/> Add to cart </a>
-					</div>
-				</div>
-
-				<div className="product">
-					<div className="img-part">
-						<img src="/images/placeholders/product.png" alt="" className='img' />
-						
-						<div className="decor_bunnies">
-							<img src="/images/decorations/bunny_m.png" alt="" />
-							<img src="/images/decorations/bunny_m.png" alt="" />
-							<img src="/images/decorations/bunny_m.png" alt="" />
-						</div>
-						<img src="/images/decorations/x_group_2.png" alt="" className='decor_exes' />
-					</div>
-					<div className="info-part">
-					 <h2 className='prod-name'>Pibba Keychain Pack</h2>
-					 <hr  className='line'/>
-					 <p className='prod-desc'>{`
-						Ever wanted a cute lil eldritch mom to carry around with you? Now's your chance!
-					 `}</p>
-					</div>
-					
-					<img src="/images/decorations/slash.png" alt="" className='decor_slash' />
-					<div className="pricing">
-						<div className="price">$15.00 - $45.00</div>
-						<a href="https://pinbunshop.bigcartel.com/product/pibba-keychain-pack" className='btn add'> <FaPlus/> Add to cart </a>
-					</div>
-				</div>
-
-				<div className="product">
-					<div className="img-part">
-						<img src="/images/placeholders/product.png" alt="" className='img' />
-						
-						<div className="decor_bunnies">
-							<img src="/images/decorations/bunny_m.png" alt="" />
-							<img src="/images/decorations/bunny_m.png" alt="" />
-							<img src="/images/decorations/bunny_m.png" alt="" />
-						</div>
-						<img src="/images/decorations/x_group_2.png" alt="" className='decor_exes' />
-					</div>
-					<div className="info-part">
-					 <h2 className='prod-name'>Pibba Keychain Pack</h2>
-					 <hr  className='line'/>
-					 <p className='prod-desc'>{`
-						Ever wanted a cute lil eldritch mom to carry around with you? Now's your chance!
-					 `}</p>
-					</div>
-					
-					<img src="/images/decorations/slash.png" alt="" className='decor_slash' />
-					<div className="pricing">
-						<div className="price">$15.00 - $45.00</div>
-						<a href="https://pinbunshop.bigcartel.com/product/pibba-keychain-pack" className='btn add'> <FaPlus/> Add to cart </a>
-					</div>
-				</div>
-
-				<div className="product">
-					<div className="img-part">
-						<img src="/images/placeholders/product.png" alt="" className='img' />
-						
-						<div className="decor_bunnies">
-							<img src="/images/decorations/bunny_m.png" alt="" />
-							<img src="/images/decorations/bunny_m.png" alt="" />
-							<img src="/images/decorations/bunny_m.png" alt="" />
-						</div>
-						<img src="/images/decorations/x_group_2.png" alt="" className='decor_exes' />
-					</div>
-					<div className="info-part">
-					 <h2 className='prod-name'>Pibba Keychain Pack</h2>
-					 <hr  className='line'/>
-					 <p className='prod-desc'>{`
-						Ever wanted a cute lil eldritch mom to carry around with you? Now's your chance!
-					 `}</p>
-					</div>
-					
-					<img src="/images/decorations/slash.png" alt="" className='decor_slash' />
-					<div className="pricing">
-						<div className="price">$15.00 - $45.00</div>
-						<a href="https://pinbunshop.bigcartel.com/product/pibba-keychain-pack" className='btn add'> <FaPlus/> Add to cart </a>
-					</div>
-				</div>
+				
+				})}
 			</div>
 		</main>
 	)

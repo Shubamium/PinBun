@@ -58,6 +58,10 @@
 			border: 3px solid var(--cPrimaryDark);
 			border-radius: 1em;
 
+			transition: all 400ms ease;
+			&:hover{
+				scale: 1.05;
+			}
 			.img-part{
 				// min-height: 70%;
 				height: 75%;
@@ -128,6 +132,8 @@
 					font-size: 1.6rem;
 					border-radius: 1em;
 					font-weight: 500;
+					min-width: 170px;
+					text-align: center;
 				}
 
 				.add{

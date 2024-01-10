@@ -66,6 +66,20 @@
 					.credit{
 						text-decoration: none;
 						text-shadow: 1px 1px rgba(0, 0, 0, 0.547);
+						transition: all 100ms ease;
+						span{
+							transition: all 150ms ease;
+						}
+						&:hover{
+							scale: 1.1 1;
+							color: black;
+							text-shadow: 1px 1px rgb(255, 255, 255);
+
+							span{
+								translate: 200px;
+							}
+							transform-origin: center;
+						}
 					}
 				}
 				
