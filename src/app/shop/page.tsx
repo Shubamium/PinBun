@@ -2,12 +2,13 @@ import React from 'react'
 import './shop.scss'
 import { FaPlus, FaShoppingBag, FaShoppingCart } from 'react-icons/fa'
 import { fetchData, urlFor } from '@/db/client'
+import PortableText from 'react-portable-text'
 type Props = {}
 
 type ProductData = {
 	_id: string
 	name: string
-	description: string
+	description: object[]
 	image: string
 	price: string
 	store_url: string
@@ -58,7 +59,11 @@ export default async function page({}: Props) {
 					<div className="info-part">
 					 <h2 className='prod-name'>{product.name}</h2>
 					 <hr  className='line'/>
-					 <p className='prod-desc'>{product.description}</p>
+					 <div className='prod-desc'>
+						<PortableText
+							content={product.description}
+						/>
+					 </div>
 					</div>
 					
 					<img src="/images/decorations/slash.png" alt="" className='decor_slash' />
