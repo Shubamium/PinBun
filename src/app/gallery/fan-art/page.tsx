@@ -34,7 +34,7 @@ export default async function page({}: Props) {
 					data && data.length > 0 && data.map((fanart)=>{
 						return 	<figure className='art' key={fanart._id}>
 						<div className="main-img">
-									<img src={urlFor(fanart.image).url()} alt="" />
+									<img src={fanart.image && urlFor(fanart.image).url()} alt="" />
 						</div>
 						<div className="decoration">
 							<img src="/images/decorations/bunny_m.png" alt="" />
@@ -42,8 +42,8 @@ export default async function page({}: Props) {
 							<img src="/images/decorations/bunny_m.png" alt="" />
 						</div>
 						<div className="info">
-							<a href={fanart.credit.link} className='ppl'>
-								<FaPalette/> {fanart.credit.name}
+							<a href={fanart.credit?.link ?? '#'} className='ppl'>
+								<FaPalette/> {fanart.credit?.name ?? ''}
 							</a>
 						</div>
 					</figure>

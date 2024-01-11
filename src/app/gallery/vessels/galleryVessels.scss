@@ -108,16 +108,15 @@
 					border-radius: 1em;
 
 					object-fit: cover; 
-					object-position: 80% 90%;
+					// object-position: 80% 90%;
 				}
 				.full-img{
 					height: 100%;
 					max-width: 100%;
 					object-fit: contain;
-
 					right: -30%;
 					top: 0%;
-					scale: 1.15;
+					scale: 1.1;
 					// transform: lef;
 					position: absolute;
 					pointer-events: none;
