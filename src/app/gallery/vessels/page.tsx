@@ -16,7 +16,7 @@ type VesselData = {
 }
 export default async function page({}: Props) {
 	const data:VesselData[] =  await fetchData<any>(`
-		*[_type == 'vessels']{
+		*[_type == 'vessels'] | order(order asc){
 			_id,
 			name,
 			half_body,
