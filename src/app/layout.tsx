@@ -5,6 +5,7 @@ import { CSSProperties } from 'react'
 import Header from '@/components/layout/header/Header'
 import Footer from '@/components/layout/footer/Footer'
 import PageWrapper from '@/components/wrapper/pageWrapper/PageWrapper'
+import DarkThemeWrapper from '@/components/wrapper/darkThemeWrapper/DarkThemeWrapper'
 
 const fredoka = Fredoka({ subsets: ['latin'], variable:'--fontAlt' })
 const urbanist = Urbanist({ subsets: ['latin'], variable:'--fontMain' })
@@ -56,11 +57,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={urbanist.className + ' ' + fredoka.className } style={fredoka.style}  >
+      <DarkThemeWrapper className={urbanist.className + ' ' + fredoka.className } style={fredoka.style}  >
 				<Header/>
-					{children}
+				{children}
 				<Footer/>
-			</body>
+			</DarkThemeWrapper>
     </html>
   )
 }

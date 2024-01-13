@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@sanity/image-url": "^1.0.2",
+    "console-log-colors": "^0.4.0",
     "framer-motion": "^10.18.0",
     "next": "14.0.4",
     "next-sanity": "^7.0.8",
