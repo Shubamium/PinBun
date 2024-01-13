@@ -9,10 +9,10 @@ type Props = {
 }
 
 export default function DarkThemeWrapper({children,className,style}: Props) {
-	const [theme,setTheme] = useState(false);
+	const [theme,setTheme] = useState(true);
 	
 	useEffect(()=>{
-		return
+		// return
 		const intervalId = setInterval(()=>{
 			setTheme(false)
 			console.log('switching theme : '+ color.black('dark'))
@@ -45,7 +45,7 @@ export default function DarkThemeWrapper({children,className,style}: Props) {
 			},4000)
 			console.log('switching theme : '+ color.redBright('light'))
 
-		},10*1000)
+		},5*1000)
 
 		return () => {
 			clearInterval(intervalId)

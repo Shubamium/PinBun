@@ -35,6 +35,8 @@
 		// 		animation: lClaw 250ms ease;
 		// 	}	
 		// }
+		pointer-events: none;
+		user-select: none;
 		opacity: 0;
 	}
 }

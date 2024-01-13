@@ -1,0 +1,13 @@
+.image-wrapper.dark{
+	display: none;
+}
+body.dark{
+	
+	.image-wrapper.light{
+		display: none;
+	}
+
+	.image-wrapper.dark{
+		display: block;
+	}
+}

@@ -137,6 +137,9 @@
 			border-radius: 50%;
 
 		}
+		.main-dark-pfp{
+			display: none;
+		}
 	}
 
 	.contacts{
@@ -198,5 +201,70 @@
 	}
 	100%{
 		rotate: 360deg;
+	}
+}
+
+
+body.dark{
+
+	.home_hero{
+		.image{
+			.ear{
+				filter: invert(100%);
+
+			}
+
+			.main-dark-pfp{
+				// display;
+				width: 300px;
+
+				// outline: 15px solid var(--cPrimary);
+				// outline-offset: 6px;
+				// border-radius: 50%;
+				position: absolute;
+				height: 300px;
+				top: 0%;
+				left: 0%;
+				scale: 1.2;
+				display: block;
+				animation: dark-pfp 250ms ease infinite linear, position-mess 200ms steps(10,end) infinite;
+			}
+		}
+	}
+
+	@keyframes position-mess {
+		0%{
+			left: 20%;
+			top: 10%;
+		}
+		20%{
+			left: -20%;
+			top: 20%;
+		}
+
+		55%{
+			left: 33%;
+			right: -20%;
+		}
+		100%{
+			left: -20%;
+			right: 40%;
+		}
+	}
+	@keyframes dark-pfp {
+		0%{
+			opacity: 0.2;
+			filter: sepia(20%);
+			scale: 1;
+			
+		}
+		20%{
+			rotate: -20deg;
+		}
+		100%{
+			filter: sepia(0%);
+			scale: 1.2;
+			opacity: 1;
+		}
 	}
 }
