@@ -42,10 +42,10 @@ export default function DarkThemeWrapper({children,className,style}: Props) {
 			setTimeout(() => {
 				setTheme(true)
 				document.title = 'Pin Bun'
-			},4000)
+			},3500)
 			console.log('switching theme : '+ color.redBright('light'))
 
-		},5*1000)
+		},11*1000)
 
 		return () => {
 			clearInterval(intervalId)
