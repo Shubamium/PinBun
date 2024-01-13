@@ -101,7 +101,7 @@ body.dark{
 	background: url('/images/backgrounds/body_dark.png'),rgb(0, 0, 0);
 	background-size: 400px;
 	animation: moving-alt 1s steps(2,end) infinite;
-
+	
 	
 	&::before{
 		width: 100%;

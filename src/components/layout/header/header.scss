@@ -61,8 +61,47 @@ body.dark #container_header{
 		opacity: 1;
 		#claw-l{
 			#c{
-				animation: lClaw 250ms ease;
+				animation: lcClaw 1150ms steps(2,end)  alternate-reverse infinite;
+				transform-origin: 0% -40%;
+			}	
+			#m{
+				animation: lcClaw 950ms ease-in-out alternate-reverse infinite;
+				transform-origin: 0% -40%;
+				animation-delay: 200ms;
+			}	
+			#e{
+				animation: lcClaw 550ms ease-in-out alternate-reverse infinite;
+				transform-origin: 0% -40%;
+				animation-delay: 400ms;
 			}	
 		}
+		#claw-r{
+			#c_2{
+				animation: rcClaw 550ms ease-in-out alternate-reverse infinite;
+				transform-origin: 100% -50%;
+			}	
+			#m_2{
+				animation: rcClaw 1250ms steps(3,end) alternate-reverse infinite;
+				transform-origin: 100% -50%;
+				animation-delay: 200ms;
+			}	
+			#e_2{
+				animation: rcClaw 550ms ease-in-out alternate-reverse infinite;
+				transform-origin: 100% -50%;
+				animation-delay: 400ms;
+			}	
+		}
+	}
+}
+
+
+@keyframes lcClaw {
+	0%{
+		rotate:-10deg;
+	}
+}
+@keyframes rcClaw {
+	0%{
+		rotate:20deg;
 	}
 }
