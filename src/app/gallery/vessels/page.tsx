@@ -1,6 +1,7 @@
 import React from 'react'
 import './galleryVessels.scss'
 import { fetchData, urlFor } from '@/db/client'
+import GalleryWrapper from '../GalleryWrapper'
 type Props = {}
 
 
@@ -29,7 +30,7 @@ export default async function page({}: Props) {
 	
 	`)
 	return (
-		<div id='gallery_vessels'>
+		<GalleryWrapper id='gallery_vessels'>
 				<div className="vessels-list">
 						{data && data.length > 0 && data.map((vessel)=>{
 							return 	<div className="vessel" key={vessel._id}>
@@ -53,6 +54,6 @@ export default async function page({}: Props) {
 		
 				
 				</div>
-		</div>
+		</GalleryWrapper>
 	)
 }

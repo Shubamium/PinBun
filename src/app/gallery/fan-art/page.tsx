@@ -2,6 +2,7 @@ import React from 'react'
 import './galleryFanArt.scss'
 import { FaPalette } from 'react-icons/fa'
 import { fetchData, urlFor } from '@/db/client'
+import GalleryWrapper from '../GalleryWrapper'
 type Props = {}
 
 
@@ -28,7 +29,7 @@ export default async function page({}: Props) {
 		}
 	`)
 	return (
-		<div id='gallery_fan-art'>
+		<GalleryWrapper id='gallery_fan-art'>
 				<div className="art-list">
 				{
 					data && data.length > 0 && data.map((fanart)=>{
@@ -52,6 +53,6 @@ export default async function page({}: Props) {
 		
 
 				</div>	
-		</div>
+		</GalleryWrapper>
 	)
 }

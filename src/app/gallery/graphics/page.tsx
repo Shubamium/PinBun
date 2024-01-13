@@ -2,6 +2,7 @@ import React from 'react'
 import './galleryGraphics.scss'
 import { FaHeart } from 'react-icons/fa'
 import { fetchData, urlFor } from '@/db/client'
+import GalleryWrapper from '../GalleryWrapper'
 type Props = {}
 type GraphicData = {
 	_id: string
@@ -26,7 +27,7 @@ export default async function page({}: Props) {
 	}
 `)
 	return (
-		<div id='gallery_graphics'>
+		<GalleryWrapper id='gallery_graphics'>
 				<div className="graphic-list">
 					{
 						data && data.length > 0 && data.map((graphic)=>{
@@ -38,7 +39,7 @@ export default async function page({}: Props) {
 								</div>
 								<div className="info">
 									<h2> <FaHeart/>{graphic.name}</h2>
-									<a href={graphic.credit.link} className='credit'><span>{graphic.credit.name}</span></a>
+									<a href={graphic.credit.link} target='_blank'  className='credit'><span>{graphic.credit.name}</span></a>
 								</div>
 								<div className="graphic-part">
 									<img src={urlFor(graphic.image).url()} alt="" className='main_graphic' />
@@ -49,6 +50,6 @@ export default async function page({}: Props) {
 			
 				
 				</div>
-		</div>
+		</GalleryWrapper>
 	)
 }

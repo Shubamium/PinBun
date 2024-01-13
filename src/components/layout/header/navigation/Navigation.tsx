@@ -6,12 +6,13 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation';
 type Props = {}
 
+
 export default function Navigation({}: Props) {
 
 	const currentPath = usePathname();
 	const isActive = (target:string) => currentPath === target ? 'active' : ''; 
 	const has = (target:string) => currentPath.includes(target) ? 'active' : ''; 
-	
+
 	return (
 		<nav id='container_nav'>
 			<Link href="/" className={`nav-link ${isActive('/')}`}>

@@ -2,11 +2,12 @@ import React from 'react'
 import './contact.scss'
 import { CiHeart } from 'react-icons/ci'
 import ContactList from '../(home)/ContactList/ContactList'
+import PageWrapper from '@/components/wrapper/pageWrapper/PageWrapper'
 type Props = {}
 
 export default function page({}: Props) {
 	return (
-		<main id='container_contact'>
+		<PageWrapper id='container_contact'>
 				<div className="decor_ears">
 					<img src="/images/decorations/ear_limp.png" alt="" className='ear l ' />
 					<img src="/images/decorations/ear_limp.png" alt="" className='ear r' />
@@ -56,6 +57,6 @@ export default function page({}: Props) {
 				<img src="/images/decorations/carrot.png" alt="" className='decor_c carrot m' />
 				<img src="/images/decorations/carrot.png" alt="" className='decor_c carrot b' />
 			</div>
-		</main>	
+		</PageWrapper>	
 	)
 }

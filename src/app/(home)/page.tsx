@@ -1,11 +1,12 @@
+import PageWrapper from "@/components/wrapper/pageWrapper/PageWrapper";
 import HomeHeroSection from "./HeroSection/HomeHeroSection";
 
 export default function Home() {
 
   return (
-    <main id="container_home">
+    <PageWrapper id="container_home">
 			 <HomeHeroSection/>
-    </main>
+    </PageWrapper>
   )
 
 }

@@ -3,6 +3,7 @@ import './shop.scss'
 import { FaPlus, FaShoppingBag, FaShoppingCart } from 'react-icons/fa'
 import { fetchData, urlFor } from '@/db/client'
 import PortableText from 'react-portable-text'
+import PageWrapper from '@/components/wrapper/pageWrapper/PageWrapper'
 type Props = {}
 
 type ProductData = {
@@ -26,7 +27,7 @@ export default async function page({}: Props) {
 		}
 `)
 	return (
-		<main id='container_shop'>
+		<PageWrapper id='container_shop'>
 			<header>
 				<div className="bunny-decor r">
 					<img src="/images/decorations/bunny_m.png" alt="" />
@@ -75,6 +76,6 @@ export default async function page({}: Props) {
 				
 				})}
 			</div>
-		</main>
+		</PageWrapper>
 	)
 }

@@ -83,7 +83,9 @@
 				}
 				.credit{
 					font-size: .7rem;
-					color: var(--cPrimary);
+					a{
+						color: var(--cPrimary);
+					}
 					text-decoration: none;
 				}
 			}
