@@ -85,6 +85,17 @@
 	}
 }
 
+body.dark{
+	#container_nav{
+		.nav-link{
+			&:hover,&.active{
+				span,img{
+					filter: drop-shadow(2px 2px 0px rgb(255, 83, 83)) !important; 
+				}
+			}
+		}
+	}
+}
 @keyframes flinch {
 	from{
 		rotate: 8deg;
