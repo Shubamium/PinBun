@@ -4,6 +4,9 @@
 	height: 20px;
 	bottom: 0;
 	left: 0%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row-reverse;
 	z-index: 1000;
 	
 	background: white;
@@ -16,6 +19,12 @@
 		text-shadow: 1px 1px rgba(0, 0, 0, 0.146);
 	}
 
+	svg{
+		fill: var(--cPrimary);
+	}
+	b.dark{
+		display: none;
+	}
 	a{
 		b{
 			transition: all 550ms ease;
@@ -79,5 +88,12 @@ body.dark{
 			background-size: 50px 70px;
 
 		}
+		
+			b.light{
+				display: none;
+			}
+			b.dark{
+				display: block;
+			}
 	}
 }

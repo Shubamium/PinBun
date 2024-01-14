@@ -20,6 +20,9 @@
 			.answer{
 				color: black;
 				transform: skew(-40deg) rotate(-2deg);
+				&.dark{
+					display: none;
+				}
 			}
 			figure{
 				img{
@@ -28,4 +31,30 @@
 				}
 			}
 		}
+}
+
+body.dark{
+	#about_tingle{
+		background: url('/images/textures/circle_dot.png'),#261216;
+		.content{
+			article{
+				.light{
+					display: none;
+				}
+				.dark{
+					display: block;
+					transform: skew(0);
+					color: #FF076F;
+					scale: 1.2;
+				}
+			}
+
+			figure{
+				img{
+					filter: brightness(20%) saturate(1000%);
+
+				}
+			}
+		}
+	}
 }

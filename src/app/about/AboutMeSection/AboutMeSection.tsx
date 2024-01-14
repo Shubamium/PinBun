@@ -1,5 +1,6 @@
 import React from 'react'
 import './aboutMeSection.scss'
+import ImageWrapper from '@/components/wrapper/imageWrapper/ImageWrapper'
 type Props = {}
 
 export default function AboutMeSection({}: Props) {
@@ -9,13 +10,13 @@ export default function AboutMeSection({}: Props) {
 				<div className="art-part">
 						{/* Decoration */}
 						<img src="/images/decorations/x_group.png" alt="" className='decor decor_exes el' />
-						<img src="/images/decorations/carrot.png" alt="" className='decor decor_carrot l el' />
-						<img src="/images/decorations/carrot.png" alt="" className='decor decor_carrot r er' />
+						<ImageWrapper darkSrc='/images/decorations/about_eyes.png' src="/images/decorations/carrot.png" alt="" className='decor decor_carrot l el' />
+						<ImageWrapper darkSrc="/images/decorations/about_eyes.png" src="/images/decorations/carrot.png" alt="" className='decor decor_carrot r er' />
 						<img src="/images/decorations/red_heart.png" alt="" className='decor decor_heart red el' />
 						<img src="/images/decorations/black_heart.png" alt="" className='decor decor_heart black er' />
 
 
-						<img src="/images/graphics/about_main.png" alt="" className='main_art' />
+						<ImageWrapper darkSrc='/images/graphics/about_main_d.png' src="/images/graphics/about_main.png" alt="" className='main_art' />
 				</div>
 				<div className="gfx-panel">
 						<div className="data">
@@ -69,7 +70,7 @@ export default function AboutMeSection({}: Props) {
 								</div>
 							</div>
 
-							<img src="/images/graphics/about_artside.png" alt="" className='decor_tagcheebs' />
+							<ImageWrapper darkSrc='/images/graphics/about_transform.gif' src="/images/graphics/about_artside.png" alt="" className='decor_tagcheebs' />
 						</div>
 					</div>
 				</div>

@@ -206,7 +206,16 @@
 
 
 body.dark{
-
+	.home_hero .text .action {
+		.btn {
+			transform: skew(60deg) rotate(20deg);
+			transition: transform 0ms;
+		}	
+		.hi{
+			transform: skew(60deg) rotate(-220deg);
+			border-bottom: 4px solid  rgb(0, 0, 0);
+		}
+	}
 	.home_hero{
 		.image{
 			.ear{
@@ -214,20 +223,23 @@ body.dark{
 
 			}
 
-			.main-dark-pfp{
-				// display;
-				width: 300px;
+			.pfp{
+				.main-dark-pfp{
+					// display;
+					width: 300px;
+	
+					// outline: 15px solid var(--cPrimary);
+					// outline-offset: 6px;
+					// border-radius: 50%;
+					position: absolute;
+					height: 300px;
+					top: 0%;
+					left: 0%;
+					display: block;
+					scale: 1.5;
+					animation: position-mess 1500ms infinite steps(3,end), dark-pfp 5s steps(1,end) infinite ;
 
-				// outline: 15px solid var(--cPrimary);
-				// outline-offset: 6px;
-				// border-radius: 50%;
-				position: absolute;
-				height: 300px;
-				top: 0%;
-				left: 0%;
-				scale: 1.2;
-				display: block;
-				animation: dark-pfp 250ms ease infinite linear, position-mess 200ms steps(10,end) infinite;
+				}
 			}
 		}
 	}
@@ -253,17 +265,31 @@ body.dark{
 	}
 	@keyframes dark-pfp {
 		0%{
-			opacity: 0.2;
+			opacity: 1;
 			filter: sepia(20%);
-			scale: 1;
+			scale: 1.2;
 			
 		}
 		20%{
-			rotate: -20deg;
+			// rotate: -20deg;
+			scale: 1;
+
+		}
+		30%{
+			scale: 3;
+		}
+		50%{
+			scale: 1;
+		}
+		70%{
+			scale: .6;
+		}
+		92%{
+			scale: 1.2;
 		}
 		100%{
 			filter: sepia(0%);
-			scale: 1.2;
+			scale: 1.5;
 			opacity: 1;
 		}
 	}

@@ -245,6 +245,52 @@
 }
 
 
+body.dark{
+	.main_art{
+		animation: teeter 2s steps(3,end) !important;
+		filter: saturate(200%);
+	}
+	#about_about-me .gfx .gfx-panel .data .corrupt{
+		// scale: 1.5;
+		transform: scale(2.5);
+		filter: none;
+		display: inline-block;
+		color: #5199B0;
+
+		text-shadow: 0px 0px 5px #7adeff;
+	}
+	#about_about-me .art-part::before {
+		opacity: .2;
+		
+	}
+	#about_about-me .bio .panel .tags{
+		
+		background: #160D2E;
+		box-shadow: 2px 2px 24px rgba(88, 160, 255, 0.539);
+	}
+	#about_about-me .bio .panel .tags .tag-list .all-tags .tag-title {
+		background: #0A090E;
+		color: #274AFF;
+	}
+	#about_about-me .bio .panel .tags .tag-list .all-tags .tag-name {
+		background: #0A090E;
+		color: #274AFF;
+	}
+
+	#about_about-me .bio .panel{
+		border-color: #160D2E;
+		transform: skew(-20deg) rotate(-10deg);
+	}
+
+	#about_about-me .gfx .gfx-panel{
+		border-color: #160D2E;
+	}
+	#about_about-me .gfx .gfx-panel .logo .img_logo{
+		transform: skew(-60deg);
+		filter: saturate(500%);
+	}
+}
+
 @keyframes scrollish {
 	from{
 		background-position: 0% 0%;

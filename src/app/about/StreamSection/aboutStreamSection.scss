@@ -7,7 +7,7 @@
 	.content{
 		max-width: 900px;
 		margin: 0 auto;
-
+		min-height: 350px;
 		display: grid;
 		grid-template-columns: 1fr 1.5fr;
 		gap: 1em;	
@@ -38,6 +38,11 @@
 				object-position: center;
 				object-fit: contain;
 				// background: red;
+				scale: 1.2;
+			}
+	
+			.decor_darkov{
+				display: none;
 			}
 		}
 
@@ -98,4 +103,87 @@
 		}
 	}
 
+}
+
+body.dark{
+	#about_stream{
+		background: url('/images/textures/circle_dot.png'),#231526;
+		.content{
+			figure{
+				position: relative;
+				&::after{
+					background: black;
+				}
+				.decor_darkov{
+					position: absolute;
+					top: 0%;
+					left: 20%;
+					scale: 1.4;
+					display: block;
+					animation: darkov 3s alternate-reverse infinite steps(5,end),darkov-pos 0.5s alternate-reverse infinite steps(2,end);
+				}
+				.main_image{
+					transform: skew(-20deg);
+				}
+			}
+		}
+	}
+	#about_stream .content article .panel{
+		outline-color: black;
+		
+	}
+
+	#about_stream .content article .panel .title{
+		color: #24FFF2;
+
+		
+	}
+	#about_stream .content article{
+		.h{
+			color: #24FFF2;
+			scale: 1.2;
+			display: inline-block;
+			font-weight: 500;
+		}
+	}
+}
+
+@keyframes darkov {
+	0%{
+		opacity: 0.6;
+		scale: 2.2;
+	}
+	33%{
+		opacity: 1;
+		scale: 2.4;
+	}
+	66%{
+		opacity: 0.6;
+		scale: 1.5;
+	}
+	100%{
+		scale: 2.8;
+		opacity: 1;
+
+	}
+}
+
+@keyframes darkov-pos {
+	0%{
+		left: 20%;
+		top: -20%;
+	}
+	33%{
+		left: -10%;
+		top: 20%;
+	}
+	66%{
+		left: 40%;
+		top: 50%;
+	}
+	100%{
+		top: -40%;
+		left: 20%;
+
+	}
 }

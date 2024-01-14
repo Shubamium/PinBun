@@ -45,7 +45,7 @@ export default function DarkThemeWrapper({children,className,style}: Props) {
 			},3500)
 			console.log('switching theme : '+ color.redBright('light'))
 
-		},11*1000)
+		},5*1000)
 
 		return () => {
 			clearInterval(intervalId)
