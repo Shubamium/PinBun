@@ -3,6 +3,7 @@ import './contact.scss'
 import { CiHeart } from 'react-icons/ci'
 import ContactList from '../(home)/ContactList/ContactList'
 import PageWrapper from '@/components/wrapper/pageWrapper/PageWrapper'
+import ImageWrapper from '@/components/wrapper/imageWrapper/ImageWrapper'
 type Props = {}
 
 export default function page({}: Props) {
@@ -33,7 +34,7 @@ export default function page({}: Props) {
 							<input type="email" name="email" placeholder='your.email@here.com' id="email" />
 						</div>
 					</div>
-					<div className="form-group">
+					<div className="form-group message-form">
 						<label htmlFor="message">Message</label>
 						<textarea name="message" placeholder='Write your message here!' id="message"></textarea>
 					</div>
@@ -48,14 +49,15 @@ export default function page({}: Props) {
 				<figure className='art-part'>
 					<div className="art">
 						<div className="decor_polar"></div>
-						<img src="/images/decorations/x_group_3.png" alt="" className='decor xgroup' />
-						<img src="/images/decorations/bheart_group.png" alt="" className='decor black' />
-						<img src="/images/graphics/contact_main.png" alt="" className='art-img' />
+						<ImageWrapper darkSrc='' src="/images/decorations/x_group_3.png" alt="" className='decor xgroup' />
+						<ImageWrapper darkSrc='' src="/images/decorations/bheart_group.png" alt="" className='decor black' />
+						<ImageWrapper darkSrc='/images/graphics/contact_main_d.png' src="/images/graphics/contact_main.png" alt="" className='art-img' />
+						<ImageWrapper darkSrc='/images/graphics/contact_main_d_g.png' src="" alt="" className='art-img glow' />
 					</div>
 				</figure>
-				<img src="/images/decorations/carrot.png" alt="" className='decor_c carrot t' />
-				<img src="/images/decorations/carrot.png" alt="" className='decor_c carrot m' />
-				<img src="/images/decorations/carrot.png" alt="" className='decor_c carrot b' />
+				<ImageWrapper darkSrc='/images/decorations/about_eyes.png' src="/images/decorations/carrot.png" alt="" className='decor_c carrot t' />
+				<ImageWrapper darkSrc='/images/decorations/about_eyes.png' src="/images/decorations/carrot.png" alt="" className='decor_c carrot m' />
+				<ImageWrapper darkSrc='/images/decorations/about_eyes.png' src="/images/decorations/carrot.png" alt="" className='decor_c carrot b' />
 			</div>
 		</PageWrapper>	
 	)

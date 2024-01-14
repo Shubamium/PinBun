@@ -228,8 +228,11 @@ body.dark{
 					background: black;
 				}
 				.btn.add{
-					background: rgb(42, 29, 56);
+					background: rgb(134, 21, 255);
 					color: #24FFF2;
+					svg{
+						fill: #24FFF2;
+					}
 				}
 			}
 		}

@@ -25,6 +25,7 @@
 	.contact-panel{
 		max-width: 1200px;
 		margin: 0 auto;
+		min-height: 700px;
 		background-color: red;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -239,6 +240,7 @@
 			right: calc(0% - 80px);
 			transform-origin: center;
 			top: 15%;
+			z-index: 1000;
 
 			&.t{
 				scale: .5;
@@ -256,6 +258,100 @@
 	}
 }
 
+body.dark{
+	#container_contact{
+		.decor_ears{
+			filter: brightness(0%);
+		}
+
+		.btn.submit{
+
+			&:hover{
+				color: #FF076F !important;
+	
+			}
+		}
+		.contact-panel{
+			border-color: black;
+			background:  linear-gradient(180deg, #000 0%, #1A1A1A 100%, #000 100%);
+			box-shadow: none;
+			.art-part .art{
+				.art-img.glow{
+					position: absolute;
+					left: 0%;
+					right: 0%;
+					animation: contact 2s infinite ease-in alternate-reverse;
+					scale: 1.1;
+				}
+			}
+		}
+		.contact-panel .contact-form .form-header .head h1{
+			color: #FF076F;
+		}
+		.contact-panel .contact-form .form-header .desc p{
+			color: white;
+			opacity: .5;
+		}
+
+	.form-group{
+			label{
+				color: #FF076F !important;
+				font-weight: bold;
+				font-size: 1.5rem;
+			}
+			input,textarea{
+				background: rgb(53, 53, 68) !important;
+				&::placeholder{
+					color: #FF076F;
+					opacity: .5;
+					transform: skew(-20deg);
+					display: inline-block;
+				}
+
+				&:focus{
+					outline-color: #FF076F !important;
+				}
+				color: #FF076F !important;
+			}
+		}
+		.group .message-form{
+			label{
+				color: #FF076F;
+				font-weight: bold;
+				font-size: 1.5rem;
+			}
+			input,textarea{
+				background: rgb(53, 53, 68);
+				&::placeholder{
+					color: #FF076F;
+					opacity: .5;
+					transform: skew(-20deg);
+					display: inline-block;
+				}
+				color: #FF076F;
+			}
+		}
+	}
+
+	#container_contact .contact-panel .contact-form .form-groupa{
+		label{
+			color: #FF076F;
+			font-weight: bold;
+			font-size: 1.5rem;
+		}
+		input,textarea{
+			background: rgb(53, 53, 68);
+			&::placeholder{
+				color: #FF076F;
+				opacity: .5;
+				transform: skew(-20deg);
+				display: inline-block;
+			}
+			color: #FF076F !important;
+		}
+	}
+
+}
 @keyframes skim {
 	0%{
 		background-position: 0% 0%;
@@ -263,5 +359,14 @@
 	100%{
 		background-position: -400% 400%;
 
+	}
+}
+
+@keyframes contact {
+	0%{
+		opacity: 0;
+	}
+	100%{
+		overflow: 1;
 	}
 }
