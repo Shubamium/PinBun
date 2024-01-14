@@ -126,3 +126,28 @@
 		}
 	}
 }
+
+body.dark{
+
+	#gallery_vessels{
+		.vessels-list{
+			.vessel{
+				background: linear-gradient(70deg, #201624 25.09%, #291316 50.77%, #322739 93.58%);
+				border-color: black;
+				.vessel-name,.credit{
+					color: #24FFF2;
+					transform: skew(20deg) scaleY(2);
+					
+				}
+				.main-img{
+					.half-img{
+						filter: saturate(500%) brightness(20%);
+					}
+					.full-img{
+						filter: saturate(350%) brightness(0%);
+					}
+				}
+			}
+		}
+	}
+}

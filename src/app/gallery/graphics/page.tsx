@@ -3,6 +3,7 @@ import './galleryGraphics.scss'
 import { FaHeart } from 'react-icons/fa'
 import { fetchData, urlFor } from '@/db/client'
 import GalleryWrapper from '../GalleryWrapper'
+import ImageWrapper from '@/components/wrapper/imageWrapper/ImageWrapper'
 type Props = {}
 type GraphicData = {
 	_id: string
@@ -33,9 +34,10 @@ export default async function page({}: Props) {
 						data && data.length > 0 && data.map((graphic)=>{
 							return <figure className="graphic" key={graphic._id}>
 								<div className="decors">
-										<img src="/images/decorations/bunny_closed.png" alt="" className='decor bunny' />
-										<img src="/images/decorations/pyon.png" alt="" className='decor pyon' />
-										<img src="/images/decorations/carrot.png" alt="" className='decor carrot' />
+										<ImageWrapper darkSrc='/images/decorations/bunny_open.png' src="/images/decorations/bunny_closed.png" alt="" className='decor bunny' />
+										<ImageWrapper darkSrc='/images/decorations/about_eyes.png' src="/images/decorations/pyon.png" alt="" className='decor pyon' />
+										<ImageWrapper darkSrc="/images/decorations/about_eyes.png" src='' alt="" className='decor carrot' />
+										<ImageWrapper darkSrc="/images/decorations/about_claw.png" src='' alt="" className='decor claw' />
 								</div>
 								<div className="info">
 									<h2> <FaHeart/>{graphic.name}</h2>

@@ -71,3 +71,22 @@
 		}
 	}
 }
+body.dark{
+
+	#gallery_fan-art{
+		.art-list{
+			.art{
+				border-color: black;
+
+			}
+			.info{
+				a{
+					background: black;
+				}
+			}
+			.decoration{
+				filter: brightness(0%);
+			}
+		}
+	}
+}

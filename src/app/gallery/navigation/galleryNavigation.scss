@@ -48,3 +48,17 @@
 		}
 	}
 }
+
+
+body.dark{
+	.gallery-nav{
+		.navigation{
+			background: #0A090E;
+			rotate: -2deg;
+		}
+
+		.heart-decor{
+			filter: invert(100%) brightness(0%);
+		}
+	}
+}
