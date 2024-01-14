@@ -177,3 +177,61 @@
 		}
 	}
 }
+
+
+body.dark{
+	#container_shop{
+		header{
+			.text{
+				h2{
+					background: black !important;
+					color: #24FFF2 !important;
+					rotate: -10deg;
+					svg{
+						fill: #24FFF2 !important;
+					}
+				}
+			}
+		}
+		.product{
+			background: linear-gradient(180deg, #000 0%, #1A1A1A 100%, #000 100%);
+		
+			.decor_bunnies{
+				filter: brightness(0%);
+				transform: skew(10deg) scaleY(5);
+			}
+
+			.img-part{
+				border-color: #24FFF2;
+				// border-style: dashed/;
+				border-width: 2px;
+				.img{
+					// filter: saturate(500%) brightness(80%);
+				}
+			}
+			.info-part{
+				.prod-name{
+					color: #24FFF2;
+				}
+
+				.prod-desc > *{
+					color: white;
+					opacity: 0.8;
+				}
+				.prod-desc{
+					transform: skew(-10deg);
+				}
+			}
+
+			.pricing{
+				.price{
+					background: black;
+				}
+				.btn.add{
+					background: rgb(42, 29, 56);
+					color: #24FFF2;
+				}
+			}
+		}
+	}
+}

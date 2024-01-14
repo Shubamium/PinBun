@@ -10,7 +10,7 @@ export default function Footer({}: Props) {
 				Website Design by <a href='https://twitter.com/Shubamium2' target='_blank'><b className='light'>Shubamium</b> <b className="dark">Š̷̛̼̻̼̰̭͖͓̀͆́͑̔̍̌̈́̌͊̔̈͐͂͌̓̚̚͝͝h̵̢̲̬̥̩̖͐͊̈̆̊̑̃͆̿̇̌͊͐̓͋̔͒̄́̕̚͘u̴̡̧͙͚͍̟̹̣͉̘̰͕̝͔̪͍͐̂͑̓̓͋͐́̑̓̅̈͐͊̈̏̈̔̔̈́͝b̸̛̻͉̗͕̳͉̦̗̩̈́̑̋̓̓̈́̓͋͌̒̍͜͝͝ͅä̷̧͇͔̼͕̦͔̗́͂̔̄̑̇̈́̈́̇̑͜͝m̶̢̢͙͍͙̭̭̻͚̳̙̖͊̀̇̀̓̉͜͜ĩ̶̧̧̢̛̠̰̠̩̺̗̼̟̦̺̃̓̒ͅu̵̧͇̙̮̻̗̙̦͐̊̉̍̈́̅̂̌̓̽̀̊͐̐͝ͅͅm̴̢̡͕͙̖̱͉̣͙͉̥̗̞͚͔̰̱̫̄͛͌̏̏̀̀̏̅̆̊͛̇͊̓</b></a> -  PinBun VT &copy;2024
 			</p>
 			<p>
-				<FaExclamationTriangle/> Intense Lighting Change Warning
+				<FaExclamationTriangle/> <FaExclamationTriangle/> <FaExclamationTriangle/>  Flickering Lights Warning
 			</p>
 		</footer>
 	)

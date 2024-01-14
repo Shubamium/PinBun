@@ -4,6 +4,7 @@ import { FaPlus, FaShoppingBag, FaShoppingCart } from 'react-icons/fa'
 import { fetchData, urlFor } from '@/db/client'
 import PortableText from 'react-portable-text'
 import PageWrapper from '@/components/wrapper/pageWrapper/PageWrapper'
+import ImageWrapper from '@/components/wrapper/imageWrapper/ImageWrapper'
 type Props = {}
 
 type ProductData = {
@@ -30,17 +31,17 @@ export default async function page({}: Props) {
 		<PageWrapper id='container_shop'>
 			<header>
 				<div className="bunny-decor r">
-					<img src="/images/decorations/bunny_m.png" alt="" />
-					<img src="/images/decorations/bunny_m.png" alt="" />
-					<img src="/images/decorations/bunny_m.png" alt="" />
+					<ImageWrapper darkSrc='/images/decorations/about_eyes.png' src="/images/decorations/bunny_m.png" alt="" />
+					<ImageWrapper darkSrc='/images/decorations/about_eyes.png' src="/images/decorations/bunny_m.png" alt="" />
+					<ImageWrapper darkSrc='/images/decorations/about_eyes.png' src="/images/decorations/bunny_m.png" alt="" />
 				</div>
 				<div className="text">
 					<h2><FaShoppingBag/> Shop</h2> 
 				</div>
 				<div className="bunny-decor r">
-					<img src="/images/decorations/bunny_m.png" alt="" />
-					<img src="/images/decorations/bunny_m.png" alt="" />
-					<img src="/images/decorations/bunny_m.png" alt="" />
+					<ImageWrapper darkSrc='/images/decorations/about_eyes.png' src="/images/decorations/bunny_m.png" alt="" />
+					<ImageWrapper darkSrc='/images/decorations/about_eyes.png' src="/images/decorations/bunny_m.png" alt="" />
+					<ImageWrapper darkSrc='/images/decorations/about_eyes.png' src="/images/decorations/bunny_m.png" alt="" />
 				</div>
 			</header>
 
@@ -55,7 +56,7 @@ export default async function page({}: Props) {
 							<img src="/images/decorations/bunny_m.png" alt="" />
 							<img src="/images/decorations/bunny_m.png" alt="" />
 						</div>
-						<img src="/images/decorations/x_group_2.png" alt="" className='decor_exes' />
+						<ImageWrapper darkSrc='/images/decorations/about_eyes.png' src="/images/decorations/x_group_2.png" alt="" className='decor_exes' />
 					</div>
 					<div className="info-part">
 					 <h2 className='prod-name'>{product.name}</h2>
